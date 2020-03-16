@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="3" total="5" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="GitHubStatus" duration-ms="35245" started-at="2020-03-16T20:38:17Z" finished-at="2020-03-16T20:38:52Z">
+    <groups>
+    </groups>
+    <test name="Test Basics 1" duration-ms="35245" started-at="2020-03-16T20:38:17Z" finished-at="2020-03-16T20:38:52Z">
+      <class name="test.BaseTest">
+        <test-method status="PASS" signature="init()[pri:0, instance:test.BaseTest@29774679]" name="init" is-config="true" duration-ms="11561" started-at="2020-03-16T20:38:05Z" finished-at="2020-03-16T20:38:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="tearoff()[pri:0, instance:test.BaseTest@29774679]" name="tearoff" is-config="true" duration-ms="0" started-at="2020-03-16T20:38:52Z" finished-at="2020-03-16T20:38:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearoff -->
+      </class> <!-- test.BaseTest -->
+      <class name="test.TC01_color">
+        <test-method status="PASS" signature="TC01()[pri:0, instance:test.TC01_color@3ffc5af1]" name="TC01" duration-ms="111" started-at="2020-03-16T20:38:17Z" finished-at="2020-03-16T20:38:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC01 -->
+        <test-method status="PASS" signature="TC02()[pri:0, instance:test.TC01_color@3ffc5af1]" name="TC02" duration-ms="35109" started-at="2020-03-16T20:38:17Z" finished-at="2020-03-16T20:38:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC02 -->
+      </class> <!-- test.TC01_color -->
+    </test> <!-- Test Basics 1 -->
+  </suite> <!-- GitHubStatus -->
+</testng-results>
