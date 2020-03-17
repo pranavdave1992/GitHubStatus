@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-GitHubStatus">
-              <span class="suite-name border-passed">GitHubStatus</span>
+              <span class="suite-name border-failed">GitHubStatus</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -91,7 +91,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">2 methods, 1 failed,   1 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-GitHubStatus" class="hide-methods failed suite-GitHubStatus"> (hide)</a> <!-- hide-methods failed suite-GitHubStatus -->
+                      <a href="#" panel-name="suite-GitHubStatus" class="show-methods failed suite-GitHubStatus"> (show)</a> <!-- show-methods failed suite-GitHubStatus -->
+                    </span>
+                    <div class="method-list-content failed suite-GitHubStatus">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-GitHubStatus" title="test.TC01_color" hash-for-method="TC02">TC02</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-GitHubStatus -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -103,11 +117,6 @@
                       <span>
                         <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-GitHubStatus" title="test.TC01_color" hash-for-method="TC01">TC01</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-GitHubStatus" title="test.TC01_color" hash-for-method="TC02">TC02</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-GitHubStatus -->
@@ -122,6 +131,27 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-GitHubStatus" class="panel GitHubStatus">
+          <div class="suite-GitHubStatus-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">test.TC01_color</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC02">
+                  </a> <!-- TC02 -->
+                  <span class="method-name">TC02</span>
+                  <div class="stack-trace">java.lang.NullPointerException
+	at page.homePage.getDetails(homePage.java:61)
+	at page.homePage.getIncidentDate(homePage.java:50)
+	at test.TC01_color.TC02(TC01_color.java:21)
+... Removed 25 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-GitHubStatus-class-failed -->
           <div class="suite-GitHubStatus-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -133,13 +163,6 @@
                   <a name="TC01">
                   </a> <!-- TC01 -->
                   <span class="method-name">TC01</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="TC02">
-                  </a> <!-- TC02 -->
-                  <span class="method-name">TC02</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -203,16 +226,16 @@ data.addRows(2);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'TC02')
 data.setCell(0, 2, 'test.TC01_color')
-data.setCell(0, 3, 35109);
+data.setCell(0, 3, 5179);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'TC01')
 data.setCell(1, 2, 'test.TC01_color')
-data.setCell(1, 3, 111);
+data.setCell(1, 3, 89);
 window.suiteTableData['GitHubStatus']= { tableData: data, tableDiv: 'times-div-GitHubStatus'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 35 seconds</span>
+              <span class="suite-total-time">Total running time: 5 seconds</span>
               <div id="times-div-GitHubStatus">
               </div> <!-- times-div-GitHubStatus -->
             </div> <!-- times-div -->
@@ -227,7 +250,7 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-GitHubStatus" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">3 ignored methods</span>
+            <span class="header-content">2 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
@@ -236,8 +259,6 @@ return data;
                 <span class="ignored-method-name">init</span>
                 <br/>
                 <span class="ignored-method-name">tearoff</span>
-                <br/>
-                <span class="ignored-method-name">TC03</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -259,18 +280,20 @@ return data;
               <div class="chronological-class-name">test.TC01_color</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">TC01</span>
-                <span class="method-start">11582 ms</span>
+                <span class="method-start">10564 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">TC02</span>
-                <span class="method-start">11695 ms</span>
+                <span class="method-start">10656 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">test.BaseTest</div> <!-- chronological-class-name -->
               <div class="configuration-suite after">
                 <span class="method-name">tearoff</span>
-                <span class="method-start">46830 ms</span>
+                <span class="method-start">15874 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

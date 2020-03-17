@@ -3,12 +3,16 @@ package page;
 import java.util.List;
 import java.util.NoSuchElementException;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.*;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import test.BaseTest;
 
@@ -23,16 +27,6 @@ public class homePage extends BaseTest{
 
 	@FindBy(xpath = ".//*[@fill != '#28a745' and contains(@class,'day')]")
 	List<WebElement> colorStatus;
-	
-	@FindBy(xpath = "(.//*[@fill != '#28a745' and contains(@class,'day')])[27]")
-	WebElement colorStatus27;
-
-	@FindBy(xpath = "(.//*[@fill != '#28a745' and contains(@class,'day')])[28]")
-	WebElement colorStatus28;
-	
-	@FindBy(xpath = "(.//*[@fill != '#28a745' and contains(@class,'day')])[29]")
-	WebElement colorStatus29;
-	
 	
 	@FindBy(xpath = ".//div[@class='date']")
 	WebElement incidentDate;
@@ -53,24 +47,22 @@ public class homePage extends BaseTest{
 		for (WebElement i : colorStatus) 
 		{ 
 			System.out.println(++c);	
-			//System.out.println(i.getAttribute("class"));
 			getDetails(i);
 		}
-		
 	}
 	
 	public void getDetails(WebElement a) throws InterruptedException {
 		js.executeScript("arguments[0].scrollIntoView(true);", a);
-		hover.moveToElement(a).doubleClick().build().perform();
-		//a.doubleClick();
-		Thread.sleep(1000);
+		Action ai = hover.moveToElement(a).build();
+		ai.perform();
+		Thread.sleep(5000);
 		
 		System.out.println(incidentDate.getText() + " " +
 							incidentHour.getText()  + " " +
 							incidentMin.getText());
-		System.out.println("Color Code: " + a.getAttribute("fill"));
-		System.out.println("-----------------------------");
 		
+		driver.findElement(By.xpath(".//*[text()='Today']")).click();
+		System.out.println("-----------------------------");
 	}
 	
 	public int getColorCount() {

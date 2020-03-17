@@ -14,17 +14,11 @@ public class TC01_color extends BaseTest{
 		System.out.println("Total incident Happened: " + hp.getColorCount());
 	}
 	
+	
 	@Test
 	public void TC02() throws InterruptedException {
 		homePage hp = new homePage(driver);
 		hp.getIncidentDate();
-	}
-	
-	@Ignore
-	@Test
-	public void TC03() throws InterruptedException {
-		homePage hp = new homePage(driver);
-		hp.restGetIncidentDate();
 	}
 	
 }

@@ -1,27 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="3" total="5" passed="2">
+<testng-results skipped="0" failed="1" ignored="2" total="4" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="GitHubStatus" duration-ms="35245" started-at="2020-03-16T20:38:17Z" finished-at="2020-03-16T20:38:52Z">
+  <suite name="GitHubStatus" duration-ms="5298" started-at="2020-03-17T14:56:11Z" finished-at="2020-03-17T14:56:17Z">
     <groups>
     </groups>
-    <test name="Test Basics 1" duration-ms="35245" started-at="2020-03-16T20:38:17Z" finished-at="2020-03-16T20:38:52Z">
+    <test name="Test Basics 1" duration-ms="5298" started-at="2020-03-17T14:56:11Z" finished-at="2020-03-17T14:56:17Z">
       <class name="test.BaseTest">
-        <test-method status="PASS" signature="init()[pri:0, instance:test.BaseTest@29774679]" name="init" is-config="true" duration-ms="11561" started-at="2020-03-16T20:38:05Z" finished-at="2020-03-16T20:38:17Z">
+        <test-method status="PASS" signature="init()[pri:0, instance:test.BaseTest@61832929]" name="init" is-config="true" duration-ms="10550" started-at="2020-03-17T14:56:01Z" finished-at="2020-03-17T14:56:11Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="PASS" signature="tearoff()[pri:0, instance:test.BaseTest@29774679]" name="tearoff" is-config="true" duration-ms="0" started-at="2020-03-16T20:38:52Z" finished-at="2020-03-16T20:38:52Z">
+        <test-method status="PASS" signature="tearoff()[pri:0, instance:test.BaseTest@61832929]" name="tearoff" is-config="true" duration-ms="881" started-at="2020-03-17T14:56:17Z" finished-at="2020-03-17T14:56:18Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearoff -->
       </class> <!-- test.BaseTest -->
       <class name="test.TC01_color">
-        <test-method status="PASS" signature="TC01()[pri:0, instance:test.TC01_color@3ffc5af1]" name="TC01" duration-ms="111" started-at="2020-03-16T20:38:17Z" finished-at="2020-03-16T20:38:17Z">
+        <test-method status="PASS" signature="TC01()[pri:0, instance:test.TC01_color@29774679]" name="TC01" duration-ms="89" started-at="2020-03-17T14:56:11Z" finished-at="2020-03-17T14:56:11Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC01 -->
-        <test-method status="PASS" signature="TC02()[pri:0, instance:test.TC01_color@3ffc5af1]" name="TC02" duration-ms="35109" started-at="2020-03-16T20:38:17Z" finished-at="2020-03-16T20:38:52Z">
+        <test-method status="FAIL" signature="TC02()[pri:0, instance:test.TC01_color@29774679]" name="TC02" duration-ms="5179" started-at="2020-03-17T14:56:11Z" finished-at="2020-03-17T14:56:17Z">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+at page.homePage.getDetails(homePage.java:61)
+at page.homePage.getIncidentDate(homePage.java:50)
+at test.TC01_color.TC02(TC01_color.java:21)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC02 -->
